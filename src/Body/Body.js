@@ -1,90 +1,91 @@
 import React from "react";
 import "./Body.css";
 import { Table, Form } from "react-bootstrap";
-// import axios from "axios";
 // import React, { useEffect, useState } from "react";
+// import { useHistory } from "react-router-dom";
 
 
-// const ReactTable = () => {
-// 	const [books, setBooks] = useState([]);
-// 	const [country, setcountry] = useState("");
-// 	const [selectedBooks, setSelectedBooks] = useState([]);
-// 	useEffect(() => {
-// 	  const pathname = window.location.pathname.split("/")[1];
-// 	  if (pathname) {
-// 		setcountry(pathname);
-// 	  }
-// 	  axios
-// 		.get("https://6240cbd919f6098792401aa1.mockapi.io/book")
-// 		.then((res) => {
-// 		  setBooks(res.data);
-// 		  if (pathname) {
-// 			setSelectedBooks(
-// 			  res.data.filter((book) => book.Country === pathname)
-// 			);
-// 		  } else {
-// 			setSelectedBooks(res.data);
-// 		  }
-// 		});
-// 	}, []);
-// 	const changeCountry = (e) => {
-// 	  if (e.target.value) {
-// 		setSelectedBooks(books.filter((book) => book.Country === e.target.value));
-// 	  } else {
-// 		setSelectedBooks(books);
-// 	  }
-// 	  window.history.pushState(null, null, `/${e.target.value}`);
-// 	  setcountry(e.target.value);
-// 	};
-// 	return (
-// 	  <div className="space-y-4">
-// 		<h1 className="font-bold text-xl">Country Listing:</h1>
-// 		<select
-// 		  onChange={changeCountry}
-// 		  value={country}
-// 		  className="focus:outline border border-blue-500 outline-blue-500 flex justify-between rounded-lg
-// 		px-3 py-2 w-96"
-// 		>
-// 		  <option value="">Select Country</option>
-// 		  {books?.map((book) => (
-// 			<option key={book.id} value={book.Country}>
-// 			  {book.Country}
-// 			</option>
-// 		  ))}
-// 		</select>
-// 		<table className="w-full">
-// 		  <tr className="flex justify-evenly font-bold w-full border">
-// 			<th className="w-1/6 text-center">Country</th>
-// 			<th className="w-1/6 text-center">Author</th>
-// 			<th className="w-1/6 text-center">Title</th>
-// 			<th className="w-1/6 text-center">Language</th>
-// 			<th className="w-1/6 text-center">Pages</th>
-// 			<th className="w-1/6 text-center">Publication Year</th>
-// 			<th className="w-1/6 text-center">Image Link</th>
-// 		  </tr>
-// 		  {selectedBooks?.map((book) => (
-// 			<tr key={book.id} className="flex justify-evenly w-full border">
-// 			  <td className="w-1/6 border text-center">{book.Country}</td>
-// 			  <td className="w-1/6 border text-center">{book.Author}</td>
-// 			  <td className="w-1/6 border text-center">{book.Title}</td>
-// 			  <td className="w-1/6 border text-center">{book.Language}</td>
-// 			  <td className="w-1/6 border text-center">{book.Pages}</td>
-// 			  <td className="w-1/6 border text-center">
-// 				{new Date(book.Publication).getFullYear()}
-// 			  </td>
-// 			  <td className="w-1/6 border text-center overflow-auto scrollbar-hide">
-// 				<a href={book.Image} target="_blank" rel="noreferrer">
-// 				  {book.Image}
-// 				</a>
-// 			  </td>
-// 			</tr>
-// 		  ))}
-// 		</table>
-// 	  </div>
-// 	);
+// const ReactTable = ({ data }) => {
+//   const history = useHistory();
+//   const [books, setBooks] = useState([]);
+//   const [country, setcountry] = useState("");
+//   const [selectedBooks, setSelectedBooks] = useState([]);
+
+//   useEffect(() => {
+//     setBooks(data);
+//     const pathname = history.location.pathname.split("/")[1];
+//     if (pathname) {
+//       setcountry(pathname);
+//       setSelectedBooks(data.filter((book) => book.country === pathname));
+//     } else {
+//       setSelectedBooks(data);
+//     }
+//   }, [history, data]);
+
+//   const changeCountry = (e) => {
+//     e.preventDefault();
+//     if (e.target.value) {
+//       setSelectedBooks(books.filter((book) => book.country === e.target.value));
+//     } else {
+//       setSelectedBooks(books);
+//     }
+//     history.push(`/${e.target.value}`);
+//     setcountry(e.target.value);
 //   };
-  
-//   export default ReactTable;
+//   return (
+//     <div className="space-y-4">
+//       <h1 className="font-bold text-xl">Country Listing:</h1>
+//       <select
+//         onChange={changeCountry}
+//         value={country}
+//         className="focus:outline border border-blue-500 outline-blue-500 flex justify-between rounded-lg
+//       px-3 py-2 w-96"
+//       >
+//         <option value="">Select Country</option>
+//         {books?.map((book, index) => {
+//           return (
+//             <option key={index} value={book.country}>
+//               {book.country}
+//             </option>
+//           );
+//         })}
+//       </select>
+//       <table className="w-full overflow-auto">
+//         <tr className="flex justify-evenly font-bold w-full border">
+//           <th className="w-1/6 text-center">Country</th>
+//           <th className="w-1/6 text-center">Author</th>
+//           <th className="w-1/6 text-center">Title</th>
+//           <th className="w-1/6 text-center">Language</th>
+//           <th className="w-1/6 text-center">Pages</th>
+//           <th className="w-1/6 text-center">Publication Year</th>
+//           <th className="w-1/6 text-center">Image Link</th>
+//         </tr>
+//         {selectedBooks.map((book, index) => (
+//           <tr
+//             key={index}
+//             className={`flex ${
+//               index % 2 === 0 ? "bg-white" : "bg-green-400"
+//             } justify-evenly w-full border`}
+//           >
+//             <td className="w-1/6 border text-center">{book.country}</td>
+//             <td className="w-1/6 border text-center">{book.author}</td>
+//             <td className="w-1/6 border text-center">{book.title}</td>
+//             <td className="w-1/6 border text-center">{book.language}</td>
+//             <td className="w-1/6 border text-center">{book.pages}</td>
+//             <td className="w-1/6 border text-center">{book.year}</td>
+//             <td className="w-1/6 border text-center overflow-auto scrollbar-hide">
+//               <a href={book.link} target="_blank" rel="noreferrer">
+//                 {book.imageLink}
+//               </a>
+//             </td>
+//           </tr>
+//         ))}
+//       </table>
+//     </div>
+//   );
+// };
+
+// export default ReactTable;
 
 class ReactTable extends React.Component {
 	constructor(props) {
