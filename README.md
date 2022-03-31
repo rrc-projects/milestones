@@ -1,4 +1,4 @@
-**Hi Michael, I have used BrowersRouter and Props. Both are working. You can remove comment out to check the code.**
+**Hi Michael, I have used BrowersRouter and Props. Both are working. You can uncomment that part to check the result.**
 
 
 
