@@ -1,0 +1,45 @@
+.content-wrapper {
+	width: 100%;
+	overflow-x: auto;
+	padding: 10px;
+}
+
+.select-wrapper {
+	width: max-content;
+	margin: 2em 0;
+	display:inline-block;
+	overflow:hidden;
+	padding: 10px;
+	border:1px solid black;
+}
+
+.select-wrapper h4 {
+	font-weight: bold;
+	font-size: 1.1em;
+	color: black;
+}
+
+.select-box {
+	border:1px solid black;
+	outline:none;
+	border-radius: 0px !important;
+	background-color: #5A67E0 !important;
+	color: white !important;
+  }
+
+
+
+table {
+	width: 100%;
+	border: 1px solid black;
+	max-height: 200px;
+}
+
+td{
+	background-color: #5A67E0 !important;
+}
+
+td a{
+	color: white;
+}
+

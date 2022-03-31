@@ -1,0 +1,15 @@
+.footer {
+	border: 1px solid black;
+	padding: 3em 2em;
+	margin: 10px;
+	font-size: 18px;
+	color: white;
+	background: #5A67E0;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}
+
+.footer h4{
+	font-size: 1.2em;
+}
