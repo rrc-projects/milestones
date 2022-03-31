@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import { BrowserRouter } from "react-router-dom";
 // import booksJSON from "./books.json";
 
-
+//using browser router
 // class App extends Component {
 // 	render() {
 // 	  return (
@@ -22,7 +22,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // 	}
 //   }
 //   export default App;
-// using props
+// using props  
 
 function App(props) {
 
