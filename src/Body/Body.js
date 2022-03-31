@@ -5,6 +5,7 @@ import { Table, Form } from "react-bootstrap";
 // import { useHistory } from "react-router-dom";
 
 
+//using history from router dom
 // const ReactTable = ({ data }) => {
 //   const history = useHistory();
 //   const [books, setBooks] = useState([]);
@@ -86,6 +87,8 @@ import { Table, Form } from "react-bootstrap";
 // };
 
 // export default ReactTable;
+
+
 
 class ReactTable extends React.Component {
 	constructor(props) {

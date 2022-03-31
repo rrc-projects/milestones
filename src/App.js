@@ -22,7 +22,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // 	}
 //   }
 //   export default App;
-
+// using props
 
 function App(props) {
 
