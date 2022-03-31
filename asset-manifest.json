@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/milestones/static/css/main.4cd606cf.css",
-    "main.js": "/milestones/static/js/main.6a8c10c3.js",
+    "main.css": "/milestones/static/css/main.a31179fd.css",
+    "main.js": "/milestones/static/js/main.c38322e6.js",
     "static/js/787.522905e6.chunk.js": "/milestones/static/js/787.522905e6.chunk.js",
-    "static/media/background.svg": "/milestones/static/media/background.f7dc7d76732aada6bc26.svg",
+    "static/media/background.svg": "/milestones/static/media/background.6c508d04542c31d573bf.svg",
     "index.html": "/milestones/index.html",
-    "main.4cd606cf.css.map": "/milestones/static/css/main.4cd606cf.css.map",
-    "main.6a8c10c3.js.map": "/milestones/static/js/main.6a8c10c3.js.map",
+    "main.a31179fd.css.map": "/milestones/static/css/main.a31179fd.css.map",
+    "main.c38322e6.js.map": "/milestones/static/js/main.c38322e6.js.map",
     "787.522905e6.chunk.js.map": "/milestones/static/js/787.522905e6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4cd606cf.css",
-    "static/js/main.6a8c10c3.js"
+    "static/css/main.a31179fd.css",
+    "static/js/main.c38322e6.js"
   ]
 }
